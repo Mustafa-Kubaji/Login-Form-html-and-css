@@ -1,0 +1,318 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: poppins;
+	font-size: 16px;
+	color: #fff;
+}
+
+/*
+    position: absolute; ---> en yakın konumlandırılmış ataya göre konumlanmıştır
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    ---> sıfırlar demek, eleman tam ortada kalsın
+
+    width: 500px;
+	height: 430px; ---> eleman boyutları
+*/
+
+.form-box {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: auto auto;
+	padding: 40px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #000;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 500px;
+	height: 430px;
+}
+
+/*
+    :before ---> eleman gibi davranır ---> burada arkablan
+    
+    position: fixed; ---> sayfa kaydırılsa bile eleman her zaman aynı yerde kalır
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    ---> sıfırlar demek eleman bütün sayfayı kapsın
+
+    z-index: -1; ---> eleman arkada kalacak
+    display: block; ---> elemanlar alt alta dizilir--> öğe Yeni bir satırda başlar ve tüm genişliği kaplar
+*/
+.form-box:before {
+	background-image: url("022.jpg");
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+	filter: blur(1px);
+}
+.form-box .header-text {
+	font-size: 32px;
+	font-weight: 600;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.form-box input {
+
+
+	border-radius: 5px;
+	font-size: 18px;
+	font-family: poppins;
+    width: 100%;
+
+
+    padding: 12px 50px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+
+}
+
+/*
+    cursor: pointer; --> İmleç bir işaretçidir ve bir bağlantıyı gösterir
+*/
+.form-box button {
+	background-color: deepskyblue;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 18px;
+	padding: 10px;
+	margin: 20px 0px;
+}
+
+/***************************************************/
+
+
+
+  /* unvisited link */
+  a:link {
+    color: #BBB;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #BBB;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: deepskyblue;
+    font-family: monospace;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+
+/***************************************************/
+
+/*
+    index sayfasında inputlar ve içindeki iconlar için
+*/
+
+/*
+    position: absolute; ---> absolute eleman relative atasına göre konumlandırır 
+*/
+.fontuser {
+    position: relative;
+}
+.fontuser i{
+    position: absolute;
+    left: 15px;
+    top: 22px;
+    color: black ;
+}
+  
+.fontpassword {
+    position: relative;
+} 
+.fontpassword i{
+    position: absolute;
+    left: 15px;
+    top: 22px;
+    color: black;
+}
+
+
+.fontsearch{
+    position: relative;
+}
+.fontsearch i{
+    position: absolute;
+    left: 15px;
+    top: 22px;
+    color: black;
+}
+
+
+/***************************************************/
+
+
+
+/* buttons hover */
+button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+/* buttons hover Animation */
+button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(7px);
+    }
+}
+
+
+
+/***************************************************/
+
+
+.hr{
+	height:2px;
+	margin:5px 0 20px 0;
+	background:rgba(255,255,255,.2);
+}
+
+
+/*Şifreyi unut*/
+
+.foot-lnk{
+	text-align:center;
+}
+
+
+/***************************************************/
+
+/*
+    arama sayfasında divler ve içindeki spanlar için
+*/
+
+.arama {
+
+    border-radius: 5px;
+    background-color: #a3d3e9a8;
+    color: white;
+
+    word-break: break-word;
+    padding: 10px;
+    margin-top: 15px;
+    
+}
+span {
+    color: white;
+    font-size: 24px;
+}
+
+
+
+/***************************************************/
+
+/*
+    form sayfasında grid
+*/
+
+#form{
+    width: 1000px;
+    height: 550px;
+}
+
+/* 
+    grid-template-columns: 1fr 1fr; ---> sütünler iki eşit
+    grid-gap: 10px;  ---> padding gibi
+*/
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-gap: 10px;
+/*  background-color: #2196F3; */
+    padding: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+  
+.grid-item {
+/*  background-color: rgba(255, 255, 255, 0.8); */    
+    
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    
+/*     height: 90px;*/
+}
+  
+.item1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 170px;
+}
+.item2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.item3 {
+    grid-column: 2;
+    grid-row: 2;
+}
+.item4 {
+    grid-column: 1;
+    grid-row: 3 / span 2;
+    height: 170px;
+}
+
+.item5 {
+    grid-column: 2;
+    grid-row: 3 ;
+}
+.item6 {
+    grid-column: 2;
+    grid-row: 4 ;
+}
+
+/***************************************************/
+
+textarea {
+    width: 100%;
+
+
+    padding: 12px 50px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+    resize: none;
+    height: 165px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-family: poppins;
+  }
